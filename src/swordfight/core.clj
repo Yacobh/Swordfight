@@ -22,6 +22,6 @@
       (print "> "))
     (flush)
     (eval-command game-state game-settings (read-command))
-    (if-not (:quitting @game-state)
+    (when-not (:quitting @game-state)
       (recur)))
   (shutdown-agents))

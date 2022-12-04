@@ -6,10 +6,10 @@
                                       empty-square]]))
 
 (def pretty-unicode-piece
-  {black-rook "♜" black-knight "♞" black-bishop "♝"
-   black-queen "♛" black-king "♚" black-pawn "♟"
-   white-rook "♖" white-knight "♘" white-bishop "♗"
-   white-queen "♕" white-king "♔" white-pawn "♙"
+  {white-rook "♜" white-knight "♞" white-bishop "♝"
+   white-queen "♛" white-king "♚" white-pawn "♟"
+   black-rook "♖" black-knight "♘" black-bishop "♗"
+   black-queen "♕" black-king "♔" black-pawn "♙"
    empty-square " "})
 
 (defn show-board [board]
