@@ -15,3 +15,5 @@ game.*
 log.*
 players.dat
 *.pgn
+/.clj-kondo
+

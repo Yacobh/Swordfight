@@ -42,7 +42,7 @@
         (do
           (when-not (= @ai/hurried-move :move-cancelled)
             (swap! game-state rules/move computed-move)
-            (if (= @ai/hurried-move true)
+            (when (= @ai/hurried-move true)
               (println "# Hurried move."))
             (println (cecp-msg-move computed-move)))
           (when (:debug-mode @game-settings)
@@ -74,7 +74,7 @@
     (if (some #{[from-pos to-pos]} (rules/legal-moves @game-state))
       (do
         (swap! game-state rules/move [from-pos to-pos])
-        (if-not (:force-mode @game-settings)
+        (when-not (:force-mode @game-settings)
           (engine-move game-state game-settings)))
       (println (cecp-msg-illegal algebraic-notation)))))
 
